@@ -1,8 +1,8 @@
 
 extends Node2D
 
-# Gonkee's audio visualiser for Godot 3.2 - full tutorial https://youtu.be/AwgSICbGxJM
-# If you use this, I would prefer if you gave credit to me and my channel
+# Huge thanks to https://youtu.be/AwgSICbGxJM + https://github.com/Gonkee/Gonkees-Shaders/blob/master/non-shaders/audio_visualiser.gd
+# I modified some of it to make it dyanmically put it on the bottom of the screen
 
 onready var spectrum = AudioServer.get_bus_effect_instance(0, 0)
 
