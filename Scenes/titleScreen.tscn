@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Fonts/NotoSans/NotoSans-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/UI/Exit.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/UI/playButton.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/dynamicBackground.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/UI/Options.gd" type="Script" id=6]
 
@@ -48,7 +49,7 @@ margin_top = 87.0
 margin_right = 423.0
 margin_bottom = 110.0
 custom_fonts/font = SubResource( 3 )
-text = "Development Version 0.0.2"
+text = "Development Version 0.0.3"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -67,6 +68,7 @@ margin_right = 423.0
 margin_bottom = 115.0
 custom_fonts/font = SubResource( 2 )
 text = "Play"
+script = ExtResource( 3 )
 
 [node name="Options" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
 margin_top = 135.0
