@@ -10,6 +10,10 @@ var velocity = Vector2()
 onready var gravity = 1400
 
 func _physics_process(delta):
+	if position.y > 1000:
+		position.x = 0
+		position.y = 0
+	
 	if Input.get_action_strength("sprint"):
 		WALK_FORCE = 4000
 		WALK_MAX_SPEED = 600
