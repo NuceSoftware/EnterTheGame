@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Backgrounds/Endless-shapes.jpg" type="Texture" id=5]
+[ext_resource path="res://Scripts/dyanmicBackground.gd" type="Script" id=6]
+
+[node name="background" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 102
+custom_constants/margin_bottom = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource( 6 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = -2
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 0.6, 0.6 )
+z_index = -2
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( -30, -30 )

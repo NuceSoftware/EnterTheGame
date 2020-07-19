@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Music/intro.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/Visualiser.gd" type="Script" id=2]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="Visualiser" type="Node2D" parent="."]
+script = ExtResource( 2 )
