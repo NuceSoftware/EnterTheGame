@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/NotoSans/NotoSans-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/UI/Exit.gd" type="Script" id=2]
+[ext_resource path="res://Music/intro.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/Visualiser.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -77,3 +79,19 @@ margin_right = 423.0
 margin_bottom = 440.0
 custom_fonts/font = SubResource( 3 )
 text = "Development Version 0.0.1"
+
+[node name="CenterContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 427.0
+margin_right = 802.0
+margin_bottom = 440.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HBoxContainer/CenterContainer"]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Visualiser" type="Node2D" parent="HBoxContainer/CenterContainer/AudioStreamPlayer"]
+script = ExtResource( 4 )
