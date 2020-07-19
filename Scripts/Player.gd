@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
-const WALK_FORCE = 4000
-const WALK_MAX_SPEED = 400
-const STOP_FORCE = 1300
+var WALK_FORCE = 4000
+var WALK_MAX_SPEED = 400
+const STOP_FORCE = 1800
 const JUMP_SPEED = 800
 
 var velocity = Vector2()
@@ -10,6 +10,13 @@ var velocity = Vector2()
 onready var gravity = 1400
 
 func _physics_process(delta):
+	if Input.get_action_strength("sprint"):
+		WALK_FORCE = 4000
+		WALK_MAX_SPEED = 600
+	else:
+		WALK_FORCE = 4000
+		WALK_MAX_SPEED = 400
+	
 	# Horizontal movement code. First, get the player's input.
 	var walk = WALK_FORCE * (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"))
 	# Slow down the player if they're not trying to move.
