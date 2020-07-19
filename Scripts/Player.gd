@@ -1,13 +1,13 @@
 extends KinematicBody2D
 
-const WALK_FORCE = 1700
+const WALK_FORCE = 4000
 const WALK_MAX_SPEED = 400
 const STOP_FORCE = 1300
-const JUMP_SPEED = 700
+const JUMP_SPEED = 800
 
 var velocity = Vector2()
 
-onready var gravity = 1200
+onready var gravity = 1400
 
 func _physics_process(delta):
 	# Horizontal movement code. First, get the player's input.
