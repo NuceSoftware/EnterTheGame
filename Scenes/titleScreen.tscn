@@ -48,39 +48,45 @@ text = "EnterTheGame"
 [node name="MenuOptions" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
 margin_top = 87.0
 margin_right = 423.0
-margin_bottom = 413.0
+margin_bottom = 440.0
 size_flags_vertical = 3
 custom_constants/separation = 20
 alignment = 1
 
 [node name="Play" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
-margin_top = 60.0
+margin_top = 74.0
 margin_right = 423.0
-margin_bottom = 115.0
+margin_bottom = 129.0
 custom_fonts/font = SubResource( 2 )
 text = "Play"
 
 [node name="Options" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
-margin_top = 135.0
+margin_top = 149.0
 margin_right = 423.0
-margin_bottom = 190.0
+margin_bottom = 204.0
 custom_fonts/font = SubResource( 2 )
 text = "Options"
 
 [node name="Exit" type="Button" parent="HBoxContainer/VBoxContainer/MenuOptions"]
-margin_top = 210.0
+margin_top = 224.0
 margin_right = 423.0
-margin_bottom = 265.0
+margin_bottom = 279.0
 custom_fonts/font = SubResource( 2 )
 text = "Exit"
 script = ExtResource( 2 )
 
-[node name="Version" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Node2D" type="Node2D" parent="HBoxContainer/VBoxContainer"]
+z_index = 1
+
+[node name="Version" type="Label" parent="HBoxContainer/VBoxContainer/Node2D"]
 margin_top = 417.0
 margin_right = 423.0
 margin_bottom = 440.0
 custom_fonts/font = SubResource( 3 )
-text = "Development Version 0.0.1"
+text = "Development Version 0.0.2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CenterContainer" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 427.0
@@ -104,4 +110,7 @@ script = ExtResource( 6 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 5 )
+centered = false
+offset = Vector2( -30, -30 )
