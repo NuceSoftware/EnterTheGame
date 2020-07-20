@@ -10,10 +10,10 @@
 size = 60
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 35
 font_data = ExtResource( 1 )
 
@@ -48,7 +48,7 @@ text = "EnterTheGame"
 margin_top = 87.0
 margin_right = 423.0
 margin_bottom = 110.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "Development Version 0.0.6"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -66,7 +66,7 @@ alignment = 1
 margin_top = 60.0
 margin_right = 423.0
 margin_bottom = 115.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Play"
 script = ExtResource( 3 )
 
@@ -74,7 +74,7 @@ script = ExtResource( 3 )
 margin_top = 135.0
 margin_right = 423.0
 margin_bottom = 190.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Options"
 script = ExtResource( 6 )
 
@@ -82,7 +82,7 @@ script = ExtResource( 6 )
 margin_top = 210.0
 margin_right = 423.0
 margin_bottom = 265.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Exit"
 script = ExtResource( 2 )
 
