@@ -43,9 +43,6 @@ func _physics_process(delta):
 		velocity.y = -JUMP_SPEED
 
 
-
-
-
 func _on_bounce_trigger(body):
 	velocity.y = -JUMP_SPEED * 1.7
 
