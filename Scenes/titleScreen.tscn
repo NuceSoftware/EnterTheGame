@@ -50,7 +50,7 @@ margin_top = 87.0
 margin_right = 423.0
 margin_bottom = 110.0
 custom_fonts/font = SubResource( 2 )
-text = "Development Version 0.0.8"
+text = "Development Version 0.0.9"
 __meta__ = {
 "_edit_use_anchors_": false
 }

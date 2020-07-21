@@ -11,8 +11,10 @@ font_data = ExtResource( 2 )
 size = 35
 font_data = ExtResource( 2 )
 
-[node name="Pause" type="Control"]
+[node name="Canvas" type="CanvasLayer"]
 pause_mode = 2
+
+[node name="Pause" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
@@ -20,14 +22,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Popup" type="Panel" parent="."]
+[node name="Popup" type="Panel" parent="Pause"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="Popup"]
+[node name="MarginContainer" type="MarginContainer" parent="Pause/Popup"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/margin_right = 120
@@ -38,29 +40,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Popup/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Pause/Popup/MarginContainer"]
 margin_left = 120.0
 margin_top = 80.0
 margin_right = 904.0
 margin_bottom = 520.0
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Popup/MarginContainer/HBoxContainer"]
-margin_right = 368.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/Popup/MarginContainer/HBoxContainer"]
+margin_left = 208.0
+margin_right = 576.0
 margin_bottom = 440.0
 
-[node name="Title" type="Label" parent="Popup/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="Pause/Popup/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_right = 368.0
 margin_bottom = 83.0
 custom_fonts/font = SubResource( 1 )
 text = "Paused"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuOptions" type="VBoxContainer" parent="Popup/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="MenuOptions" type="VBoxContainer" parent="Pause/Popup/MarginContainer/HBoxContainer/VBoxContainer"]
 margin_top = 87.0
 margin_right = 368.0
 margin_bottom = 440.0
@@ -68,18 +73,18 @@ size_flags_vertical = 3
 custom_constants/separation = 20
 alignment = 1
 
-[node name="Button" type="Button" parent="Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Button" type="Button" parent="Pause/Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 margin_top = 111.0
 margin_right = 368.0
 margin_bottom = 166.0
 custom_fonts/font = SubResource( 2 )
 text = "Continue"
 
-[node name="Button2" type="Button" parent="Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
+[node name="Button2" type="Button" parent="Pause/Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions"]
 margin_top = 186.0
 margin_right = 368.0
 margin_bottom = 241.0
 custom_fonts/font = SubResource( 2 )
 text = "Return to Title Screen"
-[connection signal="pressed" from="Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/Button" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/Button2" to="." method="_on_returnTitle_pressed"]
+[connection signal="pressed" from="Pause/Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/Button" to="Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/Popup/MarginContainer/HBoxContainer/VBoxContainer/MenuOptions/Button2" to="Pause" method="_on_returnTitle_pressed"]

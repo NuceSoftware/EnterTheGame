@@ -27,4 +27,5 @@ func _on_resume_pressed():
 func _on_returnTitle_pressed():
 	get_tree().paused = false
 	visible = false
+	get_node("/root/AudioManager/Visualiser").show()
 	get_tree().change_scene("res://Scenes/titleScreen.tscn")
