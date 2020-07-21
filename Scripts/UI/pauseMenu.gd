@@ -31,9 +31,10 @@ func _on_returnTitle_pressed():
 	visible = false
 	get_node("/root/AudioManager/Visualiser").show()
 	
-	get_node("/root/AudioManager/").playing = false
-	get_node("/root/AudioManager/").set_stream(newSong)
-	get_node("/root/AudioManager/").playing = true
+	if get_node("/root/AudioManager/Visualiser").musicEnabled == true:
+		get_node("/root/AudioManager/").playing = false
+		get_node("/root/AudioManager/").set_stream(newSong)
+		get_node("/root/AudioManager/").playing = true
 	
 	get_tree().change_scene("res://Scenes/titleScreen.tscn")
 

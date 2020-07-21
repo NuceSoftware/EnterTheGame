@@ -5,6 +5,8 @@ extends Node2D
 # I modified some of it to make it dyanmically put it on the bottom of the screen
 
 onready var spectrum = AudioServer.get_bus_effect_instance(0, 0)
+var musicEnabled = true
+
 
 var definition = 80
 # var total_w = 1000 - use screen resolution instead
