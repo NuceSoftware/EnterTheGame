@@ -25,7 +25,15 @@ func _on_resume_pressed():
 
 
 func _on_returnTitle_pressed():
+	var newSong = preload("res://Music/intro.ogg")
+	
 	get_tree().paused = false
 	visible = false
 	get_node("/root/AudioManager/Visualiser").show()
+	
+	get_node("/root/AudioManager/").playing = false
+	get_node("/root/AudioManager/").set_stream(newSong)
+	get_node("/root/AudioManager/").playing = true
+	
 	get_tree().change_scene("res://Scenes/titleScreen.tscn")
+
