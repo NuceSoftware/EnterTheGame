@@ -1,8 +1,7 @@
 extends Button
 
-# Couldn't set z index with GUI so I'm doing this
 func _ready():
-	set("z", 2)
+	grab_focus()
 
 # Called when the button attached to this script is pressed
 func _pressed():
