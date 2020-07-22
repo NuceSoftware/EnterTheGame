@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Sprites/placeholder.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://Sprites/BouncePad/Neutral.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Lava/lavaTexture.tres" type="Texture" id=6]
 [ext_resource path="res://Scenes/pauseMenu.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Fonts/NotoSans/NotoSans-Regular.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Fonts/NotoSans/NotoSans-Bold.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -115,10 +114,6 @@ extents = Vector2( 97.0256, 4.52704 )
 extents = Vector2( 266.971, 38.8395 )
 
 [sub_resource type="DynamicFont" id=9]
-size = 60
-font_data = ExtResource( 8 )
-
-[sub_resource type="DynamicFont" id=10]
 size = 40
 font_data = ExtResource( 9 )
 
@@ -182,46 +177,34 @@ __meta__ = {
 
 [node name="WindowDialog" parent="." instance=ExtResource( 7 )]
 
-[node name="Label" type="Label" parent="."]
-visible = false
-margin_left = -140.605
-margin_top = -236.361
-margin_right = 142.395
-margin_bottom = -153.361
-custom_fonts/font = SubResource( 9 )
-text = "Welcome!"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Label2" type="Label" parent="."]
-margin_left = -338.117
-margin_top = -126.1
-margin_right = 342.883
-margin_bottom = -63.1
-custom_fonts/font = SubResource( 10 )
+margin_left = -333.077
+margin_top = -84.5226
+margin_right = 347.923
+margin_bottom = -21.5226
+custom_fonts/font = SubResource( 9 )
 text = "Use AD or Arrow keys to move"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 380.497
-margin_top = -82.4569
-margin_right = 743.497
-margin_bottom = -19.4569
-custom_fonts/font = SubResource( 10 )
-text = "Press W to jump"
+margin_left = -280.961
+margin_top = -25.7605
+margin_right = 218.039
+margin_bottom = 37.2395
+custom_fonts/font = SubResource( 9 )
+text = "Press W or Space to jump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 1415.0
-margin_top = -36.0
-margin_right = 1790.0
-margin_bottom = 77.0
-custom_fonts/font = SubResource( 10 )
+margin_left = 1417.1
+margin_top = -19.6438
+margin_right = 1792.1
+margin_bottom = 93.3562
+custom_fonts/font = SubResource( 9 )
 text = "Hold shift to sprint"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -232,18 +215,18 @@ margin_left = 391.176
 margin_top = 128.448
 margin_right = 847.176
 margin_bottom = 241.448
-custom_fonts/font = SubResource( 10 )
+custom_fonts/font = SubResource( 9 )
 text = "Lava kills you!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label6" type="Label" parent="."]
-margin_left = 2403.39
-margin_top = -364.007
-margin_right = 2868.39
-margin_bottom = -251.007
-custom_fonts/font = SubResource( 10 )
+margin_left = 2397.4
+margin_top = -393.973
+margin_right = 2862.4
+margin_bottom = -280.973
+custom_fonts/font = SubResource( 9 )
 text = "Jump pads send you up"
 __meta__ = {
 "_edit_use_anchors_": false
