@@ -43,10 +43,21 @@ func _physics_process(delta):
 		velocity.y = -JUMP_SPEED
 
 
-func _on_bounce_trigger(body):
-	velocity.y = -JUMP_SPEED * 1.7
+func _on_bounce_enter(body_id, body, body_shape, area_shape):
+	# If the player entered this
+	if body_shape == 0:
+		# if its player
+		velocity.y = -JUMP_SPEED * 1.7
 
 
-func _on_lava_enter(body):
-	position.x = 0
-	position.y = 0
+func _on_lava_enter(body_id, body, body_shape, area_shape):
+	# If the player entered this
+	if body_shape == 0:
+		position.x = 0
+		position.y = 0
+
+
+func _on_door_enter(body_id, body, body_shape, area_shape):
+	# If the player entered this
+	if body_shape == 0:
+		print("A")

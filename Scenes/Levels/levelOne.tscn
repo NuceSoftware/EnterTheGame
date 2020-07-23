@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Sprites/placeholder.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/player.tscn" type="PackedScene" id=2]
@@ -117,6 +117,9 @@ extents = Vector2( 266.971, 38.8395 )
 [sub_resource type="DynamicFont" id=9]
 size = 40
 font_data = ExtResource( 9 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 32.8433, 64.7443 )
 
 [node name="Walls" type="TileMap"]
 tile_set = SubResource( 3 )
@@ -248,5 +251,11 @@ __meta__ = {
 [node name="Door" type="Sprite" parent="."]
 position = Vector2( 4703.85, -896.373 )
 texture = ExtResource( 8 )
-[connection signal="body_entered" from="Bounce/Area2D" to="player" method="_on_bounce_trigger"]
-[connection signal="body_entered" from="Lava/Area2D" to="player" method="_on_lava_enter"]
+
+[node name="Area2D" type="Area2D" parent="Door"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
+shape = SubResource( 10 )
+[connection signal="body_shape_entered" from="Bounce/Area2D" to="player" method="_on_bounce_enter"]
+[connection signal="body_shape_entered" from="Lava/Area2D" to="player" method="_on_lava_enter"]
+[connection signal="body_shape_entered" from="Door/Area2D" to="player" method="_on_door_enter"]
