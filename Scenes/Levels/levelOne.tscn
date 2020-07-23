@@ -128,10 +128,6 @@ tile_data = PoolIntArray( -1245157, 1, 0, -1245156, 1, 0, -1245155, 1, 0, -12451
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 
-[node name="Camera2D" type="Camera2D" parent="player"]
-current = true
-smoothing_enabled = true
-
 [node name="ParallaxBackground" parent="." instance=ExtResource( 3 )]
 
 [node name="Background" type="TileMap" parent="."]
