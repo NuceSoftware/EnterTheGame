@@ -254,7 +254,7 @@ texture = ExtResource( 8 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D"]
 shape = SubResource( 10 )
 
-[node name="MarginContainer" parent="." instance=ExtResource( 10 )]
+[node name="mobileContainer" parent="." instance=ExtResource( 10 )]
 [connection signal="body_shape_entered" from="Bounce/Area2D" to="player" method="_on_bounce_enter"]
 [connection signal="body_shape_entered" from="Lava/Area2D" to="player" method="_on_lava_enter"]
 [connection signal="body_shape_entered" from="Door/Area2D" to="player" method="_on_door_enter"]

@@ -10,19 +10,20 @@ var escapeAction = InputEventAction.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# if on mobile, show mobile controls
-	# visible = OS.has_touchscreen_ui_hint() 
+	visible = OS.has_touchscreen_ui_hint() 
+	
 	escapeAction.action = "ui_cancel"
 	moveLeft.action = "ui_left"
 	moveRight.action = "ui_right"
 	moveJump.action = "jump"
 	moveSprint.action = "sprint"
 
+# prepare for spagetti
 
 func _on_paused_pressed():
 	escapeAction.pressed = true
-	visible = false
+	get_node("../CanvasLayer").visible = false
 	Input.parse_input_event(escapeAction)
-
 
 func _on_right_button_pressed():
 	moveRight.pressed = true
@@ -47,7 +48,6 @@ func _on_sprint_pressed():
 func on_sprint_released():
 	moveSprint.pressed = false
 	Input.parse_input_event(moveSprint)
-
 
 func _on_jump_pressed():
 	moveJump.pressed = true

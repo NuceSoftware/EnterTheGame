@@ -20,6 +20,8 @@ func _process(delta):
 
 
 func _on_resume_pressed():
+	if OS.has_touchscreen_ui_hint() == true:
+		get_node("/root/Walls/mobileContainer/CanvasLayer").visible = true
 	get_tree().paused = false
 	visible = false
 
